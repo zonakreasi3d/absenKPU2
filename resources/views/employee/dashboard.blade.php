@@ -100,7 +100,7 @@
                     <div class="alert alert-info">
                         <i class="bi bi-info-circle"></i> Role: <strong>{{ ucfirst(str_replace('_', ' ', auth()->user()->role)) }}</strong>
                     </div>
-                    <a href="{{ route('employee.profile') }}" class="btn btn-primary">
+                    <a href="{{ route('employee.profile.show') }}" class="btn btn-primary">
                         <i class="bi bi-pencil-square"></i> Edit Profil
                     </a>
                 </div>

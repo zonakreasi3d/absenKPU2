@@ -213,7 +213,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('employee.profile') }}" class="nav-link {{ request()->routeIs('employee.profile') ? 'active' : '' }}">
+                    <a href="{{ route('employee.profile.show') }}" class="nav-link {{ request()->routeIs('employee.profile.show') ? 'active' : '' }}">
                         <i class="bi bi-person-circle"></i> Profil Saya
                     </a>
                 </li>
@@ -246,7 +246,7 @@
                                 <i class="bi bi-person-circle"></i> {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="{{ Auth::user()->isEmployee() ? route('employee.profile') : '#' }}">
+                                <li><a class="dropdown-item" href="{{ Auth::user()->isEmployee() ? route('employee.profile.show') : '#' }}">
                                     <i class="bi bi-person"></i> Profil
                                 </a></li>
                                 <li><hr class="dropdown-divider"></li>
