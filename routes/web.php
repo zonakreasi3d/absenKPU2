@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\BackupController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\Employee\AttendanceController as EmployeeAttendanceController;
@@ -58,8 +59,11 @@ Route::middleware(['auth', 'role:super_admin,admin'])->group(function () {
     Route::get('/users/{user}/reset-password', [UserController::class, 'showResetPasswordForm'])->name('users.reset.password.form');
     Route::put('/users/{user}/reset-password', [UserController::class, 'resetPassword'])->name('users.reset.password');
     
-    // Routes lainnya akan ditambahkan di tahap berikutnya
-    Route::get('/backup', fn() => view('backup.index'))->name('backup.index');
+    // Backup routes
+    Route::get('/backup', [BackupController::class, 'index'])->name('backup.index');
+    Route::get('/backup/create', [BackupController::class, 'create'])->name('backup.create');
+    Route::get('/backup/download/{filename}', [BackupController::class, 'download'])->name('backup.download');
+    Route::delete('/backup/{filename}', [BackupController::class, 'destroy'])->name('backup.destroy');
 });
 
 // Protected Routes - Employee
