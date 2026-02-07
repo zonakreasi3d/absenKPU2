@@ -5,10 +5,14 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\Employee\AttendanceController as EmployeeAttendanceController;
+use App\Http\Controllers\Employee\AttendanceRequestController as EmployeeAttendanceRequestController;
 use App\Http\Controllers\Employee\DashboardController as EmployeeDashboardController;
+use App\Http\Controllers\Employee\ProfileController as EmployeeProfileController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
+
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -63,9 +67,9 @@ Route::middleware(['auth', 'role:employee'])->group(function () {
     Route::get('/employee/dashboard', [EmployeeDashboardController::class, 'index'])->name('employee.dashboard');
 
     // Employee features routes
-    Route::resource('employee/attendance', Employee\AttendanceController::class);
-    Route::resource('employee/requests', Employee\AttendanceRequestController::class);
-    Route::get('employee/profile', [Employee\ProfileController::class, 'show'])->name('employee.profile.show');
-    Route::get('employee/profile/edit', [Employee\ProfileController::class, 'edit'])->name('employee.profile.edit');
-    Route::put('employee/profile', [Employee\ProfileController::class, 'update'])->name('employee.profile.update');
+    Route::resource('employee/attendance', EmployeeAttendanceController::class);
+    Route::resource('employee/requests', EmployeeAttendanceRequestController::class);
+    Route::get('employee/profile', [EmployeeProfileController::class, 'show'])->name('employee.profile.show');
+    Route::get('employee/profile/edit', [EmployeeProfileController::class, 'edit'])->name('employee.profile.edit');
+    Route::put('employee/profile', [EmployeeProfileController::class, 'update'])->name('employee.profile.update');
 });
