@@ -32,8 +32,10 @@ Route::middleware(['auth', 'role:super_admin,admin'])->group(function () {
     Route::resource('devices', DeviceController::class);
     Route::post('devices/{device}/generate-token', [DeviceController::class, 'generateApiToken'])->name('devices.generate-token');
     
+    // Attendance CRUD routes
+    Route::resource('attendance', AttendanceController::class);
+    
     // Routes lainnya akan ditambahkan di tahap berikutnya
-    Route::get('/attendance', fn() => view('attendance.index'))->name('attendance.index');
     Route::get('/reports', fn() => view('reports.index'))->name('reports.index');
     Route::get('/users', fn() => view('users.index'))->name('users.index');
     Route::get('/backup', fn() => view('backup.index'))->name('backup.index');

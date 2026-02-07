@@ -278,10 +278,10 @@
 - [x] Process queue untuk attendance_records
 
 ### **Tahap 6: Manajemen Absensi Manual**
-- [ ] View Data Absensi dengan Filter
-- [ ] CRUD Attendance Records
-- [ ] Edit Check-in/Check-out Manual
-- [ ] Validasi Duplikat Absen
+- [x] View Data Absensi dengan Filter
+- [x] CRUD Attendance Records
+- [x] Edit Check-in/Check-out Manual
+- [x] Validasi Duplikat Absen
 
 ### **Tahap 7: Laporan & Export**
 - [ ] Controller Report
@@ -501,7 +501,13 @@ attendance-system/
 - [x] Validasi & error handling
 - [x] Queue processing
 
-### **Tahap 6-11** ⏳ **BELUM DIMULAI**
+### **Tahap 6: Manajemen Absensi Manual** ✅ **SELESAI**
+- [x] View Data Absensi dengan Filter
+- [x] CRUD Attendance Records
+- [x] Edit Check-in/Check-out Manual
+- [x] Validasi Duplikat Absen
+
+### **Tahap 7-11** ⏳ **BELUM DIMULAI**
 
 ---
 
