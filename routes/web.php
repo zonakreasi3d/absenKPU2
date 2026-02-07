@@ -8,6 +8,7 @@ use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\Employee\DashboardController as EmployeeDashboardController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -61,8 +62,10 @@ Route::middleware(['auth', 'role:super_admin,admin'])->group(function () {
 Route::middleware(['auth', 'role:employee'])->group(function () {
     Route::get('/employee/dashboard', [EmployeeDashboardController::class, 'index'])->name('employee.dashboard');
 
-    // Routes lainnya akan ditambahkan di tahap berikutnya
-    Route::get('/employee/attendance', fn() => view('employee.attendance'))->name('employee.attendance');
-    Route::get('/employee/requests', fn() => view('employee.requests.index'))->name('employee.requests');
-    Route::get('/employee/profile', fn() => view('employee.profile'))->name('employee.profile');
+    // Employee features routes
+    Route::resource('employee/attendance', Employee\AttendanceController::class);
+    Route::resource('employee/requests', Employee\AttendanceRequestController::class);
+    Route::get('employee/profile', [Employee\ProfileController::class, 'show'])->name('employee.profile.show');
+    Route::get('employee/profile/edit', [Employee\ProfileController::class, 'edit'])->name('employee.profile.edit');
+    Route::put('employee/profile', [Employee\ProfileController::class, 'update'])->name('employee.profile.update');
 });

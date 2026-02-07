@@ -296,10 +296,10 @@
 - [x] Aktivasi/Deaktivasi Akun
 
 ### **Tahap 9: Employee Features**
-- [ ] Riwayat Absensi Pribadi
-- [ ] CRUD Attendance Requests (Dinas Luar)
-- [ ] Upload Foto & Lokasi GPS
-- [ ] Profil Edit
+- [x] Riwayat Absensi Pribadi
+- [x] CRUD Attendance Requests (Dinas Luar)
+- [x] Upload Foto & Lokasi GPS
+- [x] Profil Edit
 
 ### **Tahap 10: Backup & Restore**
 - [ ] Backup Database Manual
@@ -519,7 +519,13 @@ attendance-system/
 - [x] Reset Password
 - [x] Aktivasi/Deaktivasi Akun
 
-### **Tahap 9-11** ⏳ **BELUM DIMULAI**
+### **Tahap 9: Employee Features** ✅ **SELESAI**
+- [x] Riwayat Absensi Pribadi
+- [x] CRUD Attendance Requests (Dinas Luar)
+- [x] Upload Foto & Lokasi GPS
+- [x] Profil Edit
+
+### **Tahap 10-11** ⏳ **BELUM DIMULAI**
 
 ---
 
