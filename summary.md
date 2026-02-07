@@ -205,6 +205,15 @@
 - ✅ `app/Models/Department.php` - Model Department dengan relasi
 - ✅ `app/Models/Employee.php` - Model Employee dengan relasi
 
+**Controllers:**
+- ✅ `app/Http/Controllers/EmployeeController.php` - Controller CRUD karyawan
+
+**Views:**
+- ✅ `resources/views/employees/index.blade.php` - View daftar karyawan
+- ✅ `resources/views/employees/create.blade.php` - View tambah karyawan
+- ✅ `resources/views/employees/edit.blade.php` - View edit karyawan
+- ✅ `resources/views/employees/show.blade.php` - View detail karyawan
+
 ---
 
 ## 🚧 **FITUR YANG AKAN DATANG**
@@ -212,9 +221,9 @@
 ### **Tahap 3: Manajemen Karyawan (CRUD)**
 - [x] Migration & Model Employee
 - [x] Migration & Model Department
-- [ ] Controller Employee (CRUD)
-- [ ] View Index dengan DataTables
-- [ ] View Create & Edit Form
+- [x] Controller Employee (CRUD)
+- [x] View Index dengan DataTables
+- [x] View Create & Edit Form
 - [ ] Import/Export Excel
 - [ ] Upload Foto Karyawan
 - [ ] Validasi Form
@@ -437,9 +446,9 @@ attendance-system/
 ### **Tahap 3: Manajemen Karyawan** ⏳ **SEDANG DALAM PROGRES**
 - [x] Migration & Model Employee
 - [x] Migration & Model Department
-- [ ] Controller Employee (CRUD)
-- [ ] View Index dengan DataTables
-- [ ] View Create & Edit Form
+- [x] Controller Employee (CRUD)
+- [x] View Index dengan DataTables
+- [x] View Create & Edit Form
 - [ ] Import/Export Excel
 - [ ] Upload Foto Karyawan
 - [ ] Testing CRUD
