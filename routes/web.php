@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\Employee\DashboardController as EmployeeDashboardController;
 use App\Http\Controllers\EmployeeController;
 
