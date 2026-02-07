@@ -193,11 +193,25 @@
 
 ---
 
+### **4. Struktur Database untuk Karyawan**
+
+#### **File yang Sudah Dibuat:**
+
+**Migrations:**
+- ✅ `database/migrations/2026_02_07_154457_create_departments_table.php` - Migration tabel departments
+- ✅ `database/migrations/2026_02_07_154501_create_employees_table.php` - Migration tabel employees
+
+**Models:**
+- ✅ `app/Models/Department.php` - Model Department dengan relasi
+- ✅ `app/Models/Employee.php` - Model Employee dengan relasi
+
+---
+
 ## 🚧 **FITUR YANG AKAN DATANG**
 
 ### **Tahap 3: Manajemen Karyawan (CRUD)**
-- [ ] Migration & Model Employee
-- [ ] Migration & Model Department
+- [x] Migration & Model Employee
+- [x] Migration & Model Department
 - [ ] Controller Employee (CRUD)
 - [ ] View Index dengan DataTables
 - [ ] View Create & Edit Form
@@ -420,9 +434,9 @@ attendance-system/
 - [x] Fix error middleware() di Laravel 12
 - [x] Testing dashboard dengan 3 role
 
-### **Tahap 3: Manajemen Karyawan** ⏳ **BELUM DIMULAI**
-- [ ] Migration & Model Employee
-- [ ] Migration & Model Department
+### **Tahap 3: Manajemen Karyawan** ⏳ **SEDANG DALAM PROGRES**
+- [x] Migration & Model Employee
+- [x] Migration & Model Department
 - [ ] Controller Employee (CRUD)
 - [ ] View Index dengan DataTables
 - [ ] View Create & Edit Form
