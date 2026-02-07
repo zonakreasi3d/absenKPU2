@@ -213,6 +213,11 @@
 - ✅ `resources/views/employees/create.blade.php` - View tambah karyawan
 - ✅ `resources/views/employees/edit.blade.php` - View edit karyawan
 - ✅ `resources/views/employees/show.blade.php` - View detail karyawan
+- ✅ `resources/views/employees/import.blade.php` - View import karyawan
+
+**Additional Files:**
+- ✅ `app/Imports/EmployeesImport.php` - Class import karyawan dari Excel
+- ✅ `app/Exports/EmployeesExport.php` - Class export karyawan ke Excel
 
 ---
 
@@ -224,7 +229,7 @@
 - [x] Controller Employee (CRUD)
 - [x] View Index dengan DataTables
 - [x] View Create & Edit Form
-- [ ] Import/Export Excel
+- [x] Import/Export Excel
 - [ ] Upload Foto Karyawan
 - [ ] Validasi Form
 
@@ -449,7 +454,7 @@ attendance-system/
 - [x] Controller Employee (CRUD)
 - [x] View Index dengan DataTables
 - [x] View Create & Edit Form
-- [ ] Import/Export Excel
+- [x] Import/Export Excel
 - [ ] Upload Foto Karyawan
 - [ ] Testing CRUD
 

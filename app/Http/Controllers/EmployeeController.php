@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Employee;
 use App\Models\Department;
+use App\Imports\EmployeesImport;
+use App\Exports\EmployeesExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 
 class EmployeeController extends Controller
 {
@@ -125,5 +128,35 @@ class EmployeeController extends Controller
         $employee->delete();
 
         return redirect()->route('employees.index')->with('success', 'Karyawan berhasil dihapus.');
+    }
+
+    /**
+     * Export employees to Excel
+     */
+    public function export()
+    {
+        return Excel::download(new EmployeesExport, 'karyawan.xlsx');
+    }
+
+    /**
+     * Show import form
+     */
+    public function showImportForm()
+    {
+        return view('employees.import');
+    }
+
+    /**
+     * Import employees from Excel
+     */
+    public function import(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|mimes:xlsx,xls,csv'
+        ]);
+
+        Excel::import(new EmployeesImport, $request->file('file'));
+
+        return redirect()->route('employees.index')->with('success', 'Data karyawan berhasil diimpor.');
     }
 }

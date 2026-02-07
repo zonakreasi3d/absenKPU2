@@ -22,6 +22,11 @@ Route::middleware(['auth', 'role:super_admin,admin'])->group(function () {
     // Employee CRUD routes
     Route::resource('employees', EmployeeController::class);
     
+    // Employee import/export routes
+    Route::get('employees/export', [EmployeeController::class, 'export'])->name('employees.export');
+    Route::get('employees/import', [EmployeeController::class, 'showImportForm'])->name('employees.import.form');
+    Route::post('employees/import', [EmployeeController::class, 'import'])->name('employees.import');
+    
     // Routes lainnya akan ditambahkan di tahap berikutnya
     Route::get('/attendance', fn() => view('attendance.index'))->name('attendance.index');
     Route::get('/reports', fn() => view('reports.index'))->name('reports.index');

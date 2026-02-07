@@ -7,9 +7,13 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="card-title">Daftar Karyawan</h5>
-                    <a href="{{ route('employees.create') }}" class="btn btn-primary">Tambah Karyawan</a>
+                <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-3">
+                    <h5 class="card-title mb-0">Daftar Karyawan</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="{{ route('employees.create') }}" class="btn btn-primary">Tambah Karyawan</a>
+                        <a href="{{ route('employees.import.form') }}" class="btn btn-info">Import Excel</a>
+                        <a href="{{ route('employees.export') }}" class="btn btn-success">Export Excel</a>
+                    </div>
                 </div>
                 <div class="card-body">
                     @if(session('success'))
