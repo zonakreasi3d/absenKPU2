@@ -232,6 +232,15 @@
 - ✅ `app/Models/Device.php` - Model Device dengan relasi dan fungsi API token
 - ✅ `app/Models/AttendanceRecord.php` - Model sementara untuk relasi
 
+**Controllers:**
+- ✅ `app/Http/Controllers/DeviceController.php` - Controller CRUD mesin absensi dengan fungsi generate API token
+
+**Views:**
+- ✅ `resources/views/devices/index.blade.php` - View daftar mesin absensi
+- ✅ `resources/views/devices/create.blade.php` - View tambah mesin absensi
+- ✅ `resources/views/devices/edit.blade.php` - View edit mesin absensi
+- ✅ `resources/views/devices/show.blade.php` - View detail mesin absensi
+
 ---
 
 ## 🚧 **FITUR YANG AKAN DATANG**
@@ -248,8 +257,8 @@
 
 ### **Tahap 4: Manajemen Mesin Absen**
 - [x] Migration & Model Device
-- [ ] Controller Device (CRUD)
-- [ ] Generate API Token per Device
+- [x] Controller Device (CRUD)
+- [x] Generate API Token per Device
 - [ ] Test Koneksi API
 - [ ] Monitoring Status Device
 
@@ -473,8 +482,8 @@ attendance-system/
 
 ### **Tahap 4: Manajemen Mesin Absen** ⏳ **SEDANG DALAM PROGRES**
 - [x] Migration & Model Device
-- [ ] Controller Device (CRUD)
-- [ ] Generate API Token
+- [x] Controller Device (CRUD)
+- [x] Generate API Token
 - [ ] Test Koneksi API
 - [ ] Monitoring Status
 

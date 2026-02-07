@@ -27,10 +27,13 @@ Route::middleware(['auth', 'role:super_admin,admin'])->group(function () {
     Route::get('employees/import', [EmployeeController::class, 'showImportForm'])->name('employees.import.form');
     Route::post('employees/import', [EmployeeController::class, 'import'])->name('employees.import');
     
+    // Device CRUD routes
+    Route::resource('devices', DeviceController::class);
+    Route::post('devices/{device}/generate-token', [DeviceController::class, 'generateApiToken'])->name('devices.generate-token');
+    
     // Routes lainnya akan ditambahkan di tahap berikutnya
     Route::get('/attendance', fn() => view('attendance.index'))->name('attendance.index');
     Route::get('/reports', fn() => view('reports.index'))->name('reports.index');
-    Route::get('/devices', fn() => view('devices.index'))->name('devices.index');
     Route::get('/users', fn() => view('users.index'))->name('users.index');
     Route::get('/backup', fn() => view('backup.index'))->name('backup.index');
 });
