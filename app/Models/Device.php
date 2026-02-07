@@ -25,6 +25,11 @@ class Device extends Model
         return $this->hasMany(AttendanceRecord::class, 'device_id');
     }
 
+    public function attendanceLogs()
+    {
+        return $this->hasMany(AttendanceLog::class, 'device_id');
+    }
+
     // Method untuk generate API token
     public function generateApiToken()
     {

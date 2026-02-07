@@ -25,4 +25,15 @@ class Employee extends Model
     {
         return $this->belongsTo(Department::class, 'department_id');
     }
+
+    // Relasi ke data absensi
+    public function attendanceLogs()
+    {
+        return $this->hasMany(AttendanceLog::class, 'employee_id');
+    }
+
+    public function attendanceRecords()
+    {
+        return $this->hasMany(AttendanceRecord::class, 'employee_id');
+    }
 }

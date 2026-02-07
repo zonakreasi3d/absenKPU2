@@ -227,19 +227,26 @@
 
 **Migrations:**
 - ✅ `database/migrations/2026_02_07_161139_create_devices_table.php` - Migration tabel devices
+- ✅ `database/migrations/2026_02_07_161938_create_attendance_logs_table.php` - Migration tabel attendance_logs
+- ✅ `database/migrations/2026_02_07_161945_create_attendance_records_table.php` - Migration tabel attendance_records
 
 **Models:**
 - ✅ `app/Models/Device.php` - Model Device dengan relasi dan fungsi API token
-- ✅ `app/Models/AttendanceRecord.php` - Model sementara untuk relasi
+- ✅ `app/Models/AttendanceRecord.php` - Model data rekam absensi
+- ✅ `app/Models/AttendanceLog.php` - Model data log absensi mentah
 
 **Controllers:**
 - ✅ `app/Http/Controllers/DeviceController.php` - Controller CRUD mesin absensi dengan fungsi generate API token
+- ✅ `app/Http/Controllers/Api/AttendanceController.php` - Controller API untuk menerima data absensi dari mesin
 
 **Views:**
 - ✅ `resources/views/devices/index.blade.php` - View daftar mesin absensi
 - ✅ `resources/views/devices/create.blade.php` - View tambah mesin absensi
 - ✅ `resources/views/devices/edit.blade.php` - View edit mesin absensi
 - ✅ `resources/views/devices/show.blade.php` - View detail mesin absensi
+
+**Routes:**
+- ✅ `routes/api.php` - Route API untuk menerima data absensi dari mesin
 
 ---
 
@@ -263,12 +270,12 @@
 - [ ] Monitoring Status Device
 
 ### **Tahap 5: API untuk OpenWRT (Handkey 2)**
-- [ ] Controller API Attendance
-- [ ] Endpoint `/api/v1/attendance/receive`
-- [ ] Parsing format data: `ID|tanggal_waktu|in/out`
-- [ ] Validasi & error handling
-- [ ] Simpan ke attendance_logs
-- [ ] Process queue untuk attendance_records
+- [x] Controller API Attendance
+- [x] Endpoint `/api/v1/attendance/receive`
+- [x] Parsing format data: `ID|tanggal_waktu|in/out`
+- [x] Validasi & error handling
+- [x] Simpan ke attendance_logs
+- [x] Process queue untuk attendance_records
 
 ### **Tahap 6: Manajemen Absensi Manual**
 - [ ] View Data Absensi dengan Filter
@@ -487,12 +494,12 @@ attendance-system/
 - [ ] Test Koneksi API
 - [ ] Monitoring Status
 
-### **Tahap 5: API untuk OpenWRT** ⏳ **BELUM DIMULAI**
-- [ ] Controller API Attendance
-- [ ] Endpoint receive data
-- [ ] Parsing format Handkey 2
-- [ ] Validasi & error handling
-- [ ] Queue processing
+### **Tahap 5: API untuk OpenWRT** ✅ **SELESAI**
+- [x] Controller API Attendance
+- [x] Endpoint receive data
+- [x] Parsing format Handkey 2
+- [x] Validasi & error handling
+- [x] Queue processing
 
 ### **Tahap 6-11** ⏳ **BELUM DIMULAI**
 
