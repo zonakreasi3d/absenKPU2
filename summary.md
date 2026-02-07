@@ -284,11 +284,11 @@
 - [x] Validasi Duplikat Absen
 
 ### **Tahap 7: Laporan & Export**
-- [ ] Controller Report
-- [ ] Filter: Tanggal, Departemen, Karyawan
-- [ ] Export PDF (DomPDF)
-- [ ] Export Excel (Laravel Excel)
-- [ ] Rekap Harian/Mingguan/Bulanan/Tahunan
+- [x] Controller Report
+- [x] Filter: Tanggal, Departemen, Karyawan
+- [x] Export PDF (DomPDF)
+- [x] Export Excel (Laravel Excel)
+- [x] Rekap Harian/Mingguan/Bulanan/Tahunan
 
 ### **Tahap 8: Manajemen Pengguna (Super Admin)**
 - [ ] CRUD Admin Users
@@ -507,7 +507,14 @@ attendance-system/
 - [x] Edit Check-in/Check-out Manual
 - [x] Validasi Duplikat Absen
 
-### **Tahap 7-11** ⏳ **BELUM DIMULAI**
+### **Tahap 7: Laporan & Export** ✅ **SELESAI**
+- [x] Controller Report
+- [x] Filter: Tanggal, Departemen, Karyawan
+- [x] Export PDF (DomPDF)
+- [x] Export Excel (Laravel Excel)
+- [x] Rekap Harian/Mingguan/Bulanan/Tahunan
+
+### **Tahap 8-11** ⏳ **BELUM DIMULAI**
 
 ---
 

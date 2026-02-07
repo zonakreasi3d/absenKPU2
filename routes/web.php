@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\Employee\DashboardController as EmployeeDashboardController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ReportController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -36,8 +37,18 @@ Route::middleware(['auth', 'role:super_admin,admin'])->group(function () {
     // Attendance CRUD routes
     Route::resource('attendance', AttendanceController::class);
     
+    // Report routes
+    Route::prefix('reports')->name('reports.')->group(function () {
+        Route::get('/', [ReportController::class, 'index'])->name('index');
+        Route::get('/daily', [ReportController::class, 'dailyReport'])->name('daily');
+        Route::get('/weekly', [ReportController::class, 'weeklyReport'])->name('weekly');
+        Route::get('/monthly', [ReportController::class, 'monthlyReport'])->name('monthly');
+        Route::get('/yearly', [ReportController::class, 'yearlyReport'])->name('yearly');
+        Route::get('/export/pdf', [ReportController::class, 'exportPdf'])->name('export.pdf');
+        Route::get('/export/excel', [ReportController::class, 'exportExcel'])->name('export.excel');
+    });
+    
     // Routes lainnya akan ditambahkan di tahap berikutnya
-    Route::get('/reports', fn() => view('reports.index'))->name('reports.index');
     Route::get('/users', fn() => view('users.index'))->name('users.index');
     Route::get('/backup', fn() => view('backup.index'))->name('backup.index');
 });
