@@ -291,9 +291,9 @@
 - [x] Rekap Harian/Mingguan/Bulanan/Tahunan
 
 ### **Tahap 8: Manajemen Pengguna (Super Admin)**
-- [ ] CRUD Admin Users
-- [ ] Reset Password
-- [ ] Aktivasi/Deaktivasi Akun
+- [x] CRUD Admin Users
+- [x] Reset Password
+- [x] Aktivasi/Deaktivasi Akun
 
 ### **Tahap 9: Employee Features**
 - [ ] Riwayat Absensi Pribadi
@@ -514,7 +514,12 @@ attendance-system/
 - [x] Export Excel (Laravel Excel)
 - [x] Rekap Harian/Mingguan/Bulanan/Tahunan
 
-### **Tahap 8-11** ⏳ **BELUM DIMULAI**
+### **Tahap 8: Manajemen Pengguna (Super Admin)** ✅ **SELESAI**
+- [x] CRUD Admin Users
+- [x] Reset Password
+- [x] Aktivasi/Deaktivasi Akun
+
+### **Tahap 9-11** ⏳ **BELUM DIMULAI**
 
 ---
 

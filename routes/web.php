@@ -48,8 +48,12 @@ Route::middleware(['auth', 'role:super_admin,admin'])->group(function () {
         Route::get('/export/excel', [ReportController::class, 'exportExcel'])->name('export.excel');
     });
     
+    // User management routes
+    Route::resource('users', UserController::class);
+    Route::get('/users/{user}/reset-password', [UserController::class, 'showResetPasswordForm'])->name('users.reset.password.form');
+    Route::put('/users/{user}/reset-password', [UserController::class, 'resetPassword'])->name('users.reset.password');
+    
     // Routes lainnya akan ditambahkan di tahap berikutnya
-    Route::get('/users', fn() => view('users.index'))->name('users.index');
     Route::get('/backup', fn() => view('backup.index'))->name('backup.index');
 });
 
