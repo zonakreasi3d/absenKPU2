@@ -221,6 +221,19 @@
 
 ---
 
+### **5. Struktur Database untuk Mesin Absensi**
+
+#### **File yang Sudah Dibuat:**
+
+**Migrations:**
+- ✅ `database/migrations/2026_02_07_161139_create_devices_table.php` - Migration tabel devices
+
+**Models:**
+- ✅ `app/Models/Device.php` - Model Device dengan relasi dan fungsi API token
+- ✅ `app/Models/AttendanceRecord.php` - Model sementara untuk relasi
+
+---
+
 ## 🚧 **FITUR YANG AKAN DATANG**
 
 ### **Tahap 3: Manajemen Karyawan (CRUD)**
@@ -234,7 +247,7 @@
 - [ ] Validasi Form
 
 ### **Tahap 4: Manajemen Mesin Absen**
-- [ ] Migration & Model Device
+- [x] Migration & Model Device
 - [ ] Controller Device (CRUD)
 - [ ] Generate API Token per Device
 - [ ] Test Koneksi API
@@ -458,8 +471,8 @@ attendance-system/
 - [ ] Upload Foto Karyawan
 - [ ] Testing CRUD
 
-### **Tahap 4: Manajemen Mesin Absen** ⏳ **BELUM DIMULAI**
-- [ ] Migration & Model Device
+### **Tahap 4: Manajemen Mesin Absen** ⏳ **SEDANG DALAM PROGRES**
+- [x] Migration & Model Device
 - [ ] Controller Device (CRUD)
 - [ ] Generate API Token
 - [ ] Test Koneksi API
