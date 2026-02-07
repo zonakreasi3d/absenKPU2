@@ -203,7 +203,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('employee.attendance') }}" class="nav-link {{ request()->routeIs('employee.attendance') ? 'active' : '' }}">
+                    <a href="{{ route('employee.attendance.index') }}" class="nav-link {{ request()->routeIs('employee.attendance.index') ? 'active' : '' }}">
                         <i class="bi bi-clock-history"></i> Riwayat Absensi
                     </a>
                 </li>
