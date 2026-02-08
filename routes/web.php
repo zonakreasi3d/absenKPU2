@@ -71,8 +71,8 @@ Route::middleware(['auth', 'role:employee'])->group(function () {
     Route::get('/employee/dashboard', [EmployeeDashboardController::class, 'index'])->name('employee.dashboard');
 
     // Employee features routes
-    Route::resource('employee/attendance', EmployeeAttendanceController::class);
-    Route::resource('employee/requests', EmployeeAttendanceRequestController::class);
+    Route::resource('employee/attendance', EmployeeAttendanceController::class)->names('employee.attendance');
+    Route::resource('employee/requests', EmployeeAttendanceRequestController::class)->names('employee.requests');
     Route::get('employee/profile', [EmployeeProfileController::class, 'show'])->name('employee.profile.show');
     Route::get('employee/profile/edit', [EmployeeProfileController::class, 'edit'])->name('employee.profile.edit');
     Route::put('employee/profile', [EmployeeProfileController::class, 'update'])->name('employee.profile.update');

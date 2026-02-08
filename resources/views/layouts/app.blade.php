@@ -203,12 +203,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('employee.attendance.index') }}" class="nav-link {{ request()->routeIs('employee.attendance.index') ? 'active' : '' }}">
+                    <a href="{{ route('employee.attendance.index') }}"
+                        class="nav-link {{ request()->routeIs('employee.attendance.index') ? 'active' : '' }}">
                         <i class="bi bi-clock-history"></i> Riwayat Absensi
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('employee.requests') }}" class="nav-link {{ request()->routeIs('employee.requests.*') ? 'active' : '' }}">
+                    <a href="{{ route('employee.requests.index') }}" class="nav-link {{ request()->routeIs('employee.requests*') ? 'active' : '' }}">
                         <i class="bi bi-file-earmark-text"></i> Request Dinas Luar
                     </a>
                 </li>
