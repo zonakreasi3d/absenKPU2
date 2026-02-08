@@ -28,6 +28,12 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    // Relasi ke employee
+    public function employee()
+    {
+        return $this->hasOne(Employee::class, 'user_id');
+    }
+
     // Helper method untuk cek role
     public function isSuperAdmin()
     {
